@@ -1,0 +1,24 @@
+<!-- templates/index.html -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Loan Approval Predictor</title>
+</head>
+<body>
+    <h1>Loan Approval Prediction</h1>
+    <form method="post" action="/predict">
+        <label>Gender (0=Female, 1=Male):</label><input type="text" name="Gender"><br>
+        <label>Married (0=No, 1=Yes):</label><input type="text" name="Married"><br>
+        <label>Dependents (0/1/2/3):</label><input type="text" name="Dependents"><br>
+        <label>Education (0=Graduate, 1=Not Graduate):</label><input type="text" name="Education"><br>
+        <label>Self Employed (0=No, 1=Yes):</label><input type="text" name="Self_Employed"><br>
+        <label>Applicant Income:</label><input type="number" name="ApplicantIncome"><br>
+        <label>Coapplicant Income:</label><input type="number" name="CoapplicantIncome"><br>
+        <label>Loan Amount:</label><input type="number" name="LoanAmount"><br>
+        <label>Loan Term:</label><input type="number" name="Loan_Amount_Term"><br>
+        <label>Credit History (0/1):</label><input type="number" name="Credit_History"><br>
+        <label>Property Area (0=Urban, 1=Rural, 2=Semiurban):</label><input type="text" name="Property_Area"><br>
+        <button type="submit">Predict</button>
+    </form>
+</body>
+</html>
