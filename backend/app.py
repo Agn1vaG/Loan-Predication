@@ -5,12 +5,12 @@ import numpy as np
 app = Flask(__name__)
 model = pickle.load(open("loan_model.pkl", "rb"))
 
-# Home page route - shows the form
+# Home page route 
 @app.route("/", methods=["GET"])
 def home():
     return render_template("index.html")
 
-# Prediction route - processes form input
+# Prediction route 
 @app.route("/predict", methods=["POST"])
 def predict():
     data = request.form
@@ -36,6 +36,6 @@ def predict():
 
     return f"<h2>Loan {result}</h2>"
 
-# Start the Flask server
+# Start the server
 if __name__ == "__main__":
     app.run(debug=True)
